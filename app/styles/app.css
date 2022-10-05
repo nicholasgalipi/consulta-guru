@@ -29,6 +29,16 @@
 .logo{
   width: 105px;
 }
+
+.cls-1-menu {
+  fill: #ffffff;
+}
+
+.cls-2-menu {
+  fill: #30c1a5;
+}
+
+
 .menu-icon{
   width: 30px;
     height: 30px;
