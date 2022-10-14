@@ -1,5 +1,5 @@
 
-/* Pagina consulta CNPJ */
+/* Header */
 .header{
     background: #009688;
     position: absolute;
@@ -9,7 +9,7 @@
     width: 100%;
     top: 0px;
     left: 0px;
-    
+    display: block;
     
 }
   .center{
@@ -58,4 +58,13 @@
     font-weight: 500;
     margin-left: 0.5em;
     text-decoration: none;
+}
+
+/*search component*/
+
+.search{
+  background: #009688;
+    height: 4.5em;
+    z-index: 1000;
+    width: 100%;
 }
