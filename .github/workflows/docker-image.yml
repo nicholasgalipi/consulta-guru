@@ -19,4 +19,4 @@ jobs:
       - name: Run the Docker image
         env:
           firebase_token: ${{ secrets.FIREBASE_TOKEN }}
-        run: docker run -e firebase_token=$firebase_token own-docker
+        run: docker run -e firebase_token=$firebase_token consulta
