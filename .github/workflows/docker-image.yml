@@ -18,7 +18,6 @@ jobs:
       - name: Run ember tests
         run: docker run consulta ember test
       - name: Deploy the build to firebase
-        uses: actions/checkout@v3
         env:
           firebase_token: ${{ secrets.FIREBASE_TOKEN }}
         run: docker run -e firebase_token=$firebase_token consulta
