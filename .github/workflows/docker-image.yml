@@ -15,8 +15,23 @@ jobs:
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag consulta
 
+      
+
+  test:
+    name: "Test"
+
+    steps:
+      - name: Run ember tests
+      - run: docker run consulta ember test
+
+
+
+  Deploy: 
+    name: "Deploy"
+
+    steps:
       - uses: actions/checkout@v3
-      - name: Run the Docker image
+      - name: Deploy the build to firebase
         env:
           firebase_token: ${{ secrets.FIREBASE_TOKEN }}
         run: docker run -e firebase_token=$firebase_token consulta
