@@ -16,7 +16,7 @@ jobs:
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag consulta
       - name: Run ember tests
-        run: docker run consulta ember test
+        run: ember test
       - name: Deploy the build to firebase
         env:
           firebase_token: ${{ secrets.FIREBASE_TOKEN }}
