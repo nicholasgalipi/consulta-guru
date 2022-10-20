@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Run ember tests
-      - run: docker run consulta ember test
+        run: docker run consulta ember test
 
 
 
