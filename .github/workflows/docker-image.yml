@@ -8,32 +8,20 @@ on:
 
 jobs:
   build:
+    name: "Build and deploy"
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag consulta
-
-      
-
-  test:
-    name: "Test"
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Run ember tests
         run: docker run consulta ember test
-
-
-
-  Deploy: 
-    name: "Deploy"
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
       - name: Deploy the build to firebase
+        uses: actions/checkout@v3
         env:
           firebase_token: ${{ secrets.FIREBASE_TOKEN }}
         run: docker run -e firebase_token=$firebase_token consulta
+      
+
+  
