@@ -4,7 +4,7 @@ export default class CnpjRoute extends Route {
   async model(params) {
     let { cnpj } = params;
 
-    let response = await fetch('./../../google.json');
+    let response = await fetch(`./../../${cnpj}.json`);
     let { legalEntity } = await response.json();
 
     console.log(legalEntity);
