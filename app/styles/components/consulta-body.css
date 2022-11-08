@@ -1,0 +1,34 @@
+.consulta-body{
+    background: rgba(0, 150, 136, 0.15);
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.text-wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 140px;
+    padding-bottom: 125px;
+    width: 600px;
+    
+}
+
+.consulta-body h3 {
+    color: #0080cc;
+  font-weight: 300;
+  font-size: 2.1rem;
+  line-height: 2rem;
+  margin-bottom: 1em;
+}
+
+.consulta-body p {
+    text-align: justify;
+  color: #1b2738;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  opacity: 0.8;
+  margin-bottom: 5em;
+}
+

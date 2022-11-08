@@ -1,70 +1,54 @@
+@import 'components/header.css';
+@import 'components/search.css';
+@import 'components/consulta-body.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* Header */
-.header{
-    background: #009688;
-    position: absolute;
-    height: 4.5em;
-    z-index: 1000;
-    overflow: hidden;
-    width: 100%;
-    top: 0px;
-    left: 0px;
-    display: block;
-    
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-  .center{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-    margin: 0 20%;  
-  }
-  
-.menu-and-logo{
-  display: flex;
-  flex-direction: row;
-  padding-top: 10px;
-
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-.logo{
-  width: 105px;
+body {
+	line-height: 1;
 }
-
-.cls-1-menu {
-  fill: #ffffff;
+ol, ul {
+	list-style: none;
 }
-
-.cls-2-menu {
-  fill: #30c1a5;
+blockquote, q {
+	quotes: none;
 }
-
-
-.menu-icon{
-  width: 30px;
-    height: 30px;
-    transform: scale(.8);
-    fill: rgba(255,255,255,.8);
-
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
-
-.links{
-  display: flex;
-  justify-content: flex-end;
-  font-size: .9em;
-}
-.header-link{
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    font-weight: 500;
-    margin-left: 0.5em;
-    text-decoration: none;
-}
-
-/*search component*/
-
-.search{
-  background: #009688;
-    height: 4.5em;
-    z-index: 1000;
-    width: 100%;
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
