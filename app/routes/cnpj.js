@@ -14,11 +14,12 @@ export default class CnpjRoute extends Route {
     let { legalEntity } = await response.json();
 
     
-    
-    
+    //format the date
+    let openedOn = new Date(legalEntity.openedOn)
+    openedOn = openedOn.toLocaleDateString('pt-br')
    
     
-    
+    //format the activities
     let mainActivity = await legalEntity.economicActivities.filter(
       (act) => act.isMain == true
     );
@@ -26,12 +27,15 @@ export default class CnpjRoute extends Route {
       (act) => act.isMain == false
     );
 
+
+
+    //formate currency on share capital
     let shareCapital = legalEntity.shareCapital;
     shareCapital = shareCapital.toLocaleString('pt-br', {
       style: 'currency',
       currency: 'BRL',
     });
 
-    return { cnpj, legalEntity, mainActivity, secondaryActivity, shareCapital };
+    return { cnpj, legalEntity, mainActivity, secondaryActivity, shareCapital, openedOn };
   }
 }
