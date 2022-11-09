@@ -1,7 +1,11 @@
 
 <Header />
 
-<Search />
+<Search @cnpj={{this.cnpj}}
+        @handleCnpj={{this.handleCnpj}}
+        @handleQuerry={{this.handleQuerry}}
+        @cnpjIsValid={{this.cnpjIsValid}}  
+        />
 
 <Response   @legalEntity={{@model.legalEntity}} 
             @mainActivity={{@model.mainActivity}} 

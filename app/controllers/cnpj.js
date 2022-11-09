@@ -3,7 +3,7 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { service } from '@ember/service';
 
-export default class ConsultaCnpjController extends Controller {
+export default class CnpjController extends Controller {
   @service router;
 
   @tracked
