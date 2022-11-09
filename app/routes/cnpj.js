@@ -7,8 +7,19 @@ export default class CnpjRoute extends Route {
     let response = await fetch(`./../../${cnpj}.json`);
     let { legalEntity } = await response.json();
 
-    console.log(legalEntity);
+    let mainActivity = await legalEntity.economicActivities.filter(
+      (act) => act.isMain == true
+    );
+    let secondaryActivity = await legalEntity.economicActivities.filter(
+      (act) => act.isMain == false
+    );
 
-    return { cnpj, legalEntity };
+    let shareCapital = legalEntity.shareCapital;
+    shareCapital = shareCapital.toLocaleString('pt-br', {
+      style: 'currency',
+      currency: 'BRL',
+    });
+
+    return { cnpj, legalEntity, mainActivity, secondaryActivity, shareCapital };
   }
 }

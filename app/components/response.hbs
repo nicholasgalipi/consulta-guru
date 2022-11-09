@@ -1,1 +1,157 @@
-<p>{{@legalEntity.email}}</p>
+<div class="response-background">
+    <div class="response-content">
+        <div class="response-body">
+            <div class="response-text">
+                
+                
+                <div class="response-item">
+                    <h1>{{@legalEntity.name}}</h1>
+                    <ul>
+                        <li>
+                            <div>
+                                <h3>Nome Fantasia</h3>
+                                <p>{{@legalEntity.tradeName}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>Unidade</h3>
+                                <p>{{@legalEntity.unit}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>Número de Inscrição</h3>
+                                <p>{{@legalEntity.federalTaxNumber}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>Data de Abertura</h3>
+                                <p>{{@legalEntity.openedOn}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>Natureza Jurídica</h3>
+                                <p>{{@legalEntity.legalNature.code}} - {{@legalEntity.legalNature.description}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>Ente Federativo Responsável</h3>
+                                <p>{{@legalEntity.responsableEntity}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>Situação Cadastral</h3>
+                                <p>{{@legalEntity.status}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="response-item">
+                    <h2>Endereço</h2>
+                    <ul>
+                        <li>
+                            <div>
+                                <p>{{@legalEntity.address.street}}, {{@legalEntity.address.number}} - {{@legalEntity.address.additionalInformation}}</p>
+                                <p>{{@legalEntity.address.district}}, {{@legalEntity.address.city.name}} - {{@legalEntity.address.state}}</p>
+                                <p>CEP:{{@legalEntity.address.postalCode}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <iframe
+                                    title='maps'
+                                    loading='lazy'
+                                    allowfullscreen
+                                    referrerpolicy='no-referrer-when-downgrade'
+                                    src='https://www.google.com/maps/embed/v1/place?key=AIzaSyDyToojxnr4s_2RXXRc-20H0zu9Py8u9Ks
+                                    &q={{@legalEntity.address.street}}, {{@legalEntity.address.number}} - {{@legalEntity.address.additionalInformation}}
+                                    {{@legalEntity.address.district}}, {{@legalEntity.address.city.name}} - {{@legalEntity.address.state}}
+                                    CEP:{{@legalEntity.address.postalCode}}'
+                                    >
+                                    </iframe>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="response-item">
+                    <h2>Contato</h2>
+                    <ul>
+                        <li>
+                            <div>
+                                <h3>Email</h3>
+                                <p>{{@legalEntity.email}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>Telefone</h3>
+                                {{#each @legalEntity.phones as |phone|}}
+                                <p>({{phone.ddd}}) {{phone.number}}</p>
+                                {{/each}}
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="response-item response-item-col"> {{!-- concertar --}}
+                     <h2>Atividades Econômicas</h2>
+                     
+                            <ul>
+                                <li>
+                                    <h3>Atividade Econômica Primária</h3>
+                                        {{#if @mainActivity}}
+
+                                            {{#each @mainActivity as |activity|}}
+                                                <p>{{activity.code}} - {{activity.description}}</p>
+                                            {{/each}}
+
+                                        {{else}}
+
+                                        <p>
+                                            Nenhuma atividade informada
+                                        </p>
+
+                                        {{/if}}
+
+                                </li>
+                                <li>
+                                    <h3>Atividade Econômica Secundária</h3>
+                                        {{#if @secondaryActivity}}
+
+                                                {{#each @secondaryActivity as |activity|}}
+                                                    <p>{{activity.code}} - {{activity.description}}</p>
+                                                {{/each}}
+
+                                        {{else}}
+
+                                        <p>
+                                            Nenhuma atividade informada
+                                        </p>
+
+                                        {{/if}}
+                                </li>
+                            </ul>
+                </div>
+
+                <div class="response-item share">
+                    <h2>Capital Social</h2>
+                    <p class="share"> {{@shareCapital}}</p>
+                </div>
+
+                <div class="response-item">
+                    <h2>Sócios ou Administradores</h2>
+                </div>
+                
+
+
+            </div>
+        </div>
+    </div>
+</div>

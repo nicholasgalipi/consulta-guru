@@ -3,9 +3,10 @@
 
 <Search />
 
-<Response @legalEntity={{@model.legalEntity}} />
-{{!-- <h2>{{@model.cnpj}}</h2>
+<Response   @legalEntity={{@model.legalEntity}} 
+            @mainActivity={{@model.mainActivity}} 
+            @secondaryActivity={{@model.secondaryActivity}} 
+            @shareCapital={{@model.shareCapital}}
+            />
 
-<p>{{@model.legalEntity}}</p>
-
-<p>{{@model.legalEntity.email}}</p> --}} 
+<Footer />
