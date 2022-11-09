@@ -72,6 +72,12 @@
      padding: 0 2rem;
      transition: var(--transition);
 }
+.input-wrapper.mini-wrapper{
+    bottom: -32px;
+}
+.input-wrapper-false.mini-wrapper{
+    bottom: -32px;
+}
 
 .search-input{
     appearance: none;

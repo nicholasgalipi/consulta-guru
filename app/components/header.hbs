@@ -30,7 +30,7 @@
     <h1 class="{{if this.fixedHeader "search-text-mini" "search-text"}}">Consultar dados de CNPJ grátis online</h1>
 
         {{#if @cnpjIsValid}}
-             <div class="input-wrapper-false">
+             <div class="input-wrapper-false {{if this.fixedHeader "mini-wrapper"}}">
                 <AlertIcon />
                 <Input
                 class='search-input-false'
@@ -46,7 +46,7 @@
                 </button>
             </div>
         {{else}}
-            <div class="input-wrapper">
+            <div class="input-wrapper {{if this.fixedHeader "mini-wrapper"}}">
                 <Input
                 class='search-input'
                 @type="text"
