@@ -1,7 +1,7 @@
 {{page-title "Consulte dados de um CNPJ onlione grátis em poucos segundos!"}}
-<Header />
 
-<Search @cnpj={{this.cnpj}}
+
+<Header @cnpj={{this.cnpj}}
         @handleCnpj={{this.handleCnpj}}
         @handleQuerry={{this.handleQuerry}}
         @cnpjIsValid={{this.cnpjIsValid}}  
@@ -11,6 +11,7 @@
             @mainActivity={{@model.mainActivity}} 
             @secondaryActivity={{@model.secondaryActivity}} 
             @shareCapital={{@model.shareCapital}}
+            @openedOn={{@model.openedOn}}
             />
 
 <Footer />
