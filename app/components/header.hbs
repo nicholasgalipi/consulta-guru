@@ -1,16 +1,16 @@
-<header class="header">
+<header class="{{if this.fixedHeader "header-mini" "header"}}">
 
     <div class="center">
         
-        <div class="menu-and-logo">
+        <div class={{if this.fixedHeader "menu-and-logo-mini" "menu-and-logo"}}>
             <svg viewBox="0 0 24 24" class="menu-icon">
 	            <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
             </svg>
-            <Logo />
+            <Logo class="{{if this.fixedHeader "logo-mini" "logo"}}"/>
             
         </div>
 
-        <div class="links">
+        <div class="{{if this.fixedHeader "links-mini" "links"}}">
             <a href="https://nfe.io/produtos/" target="_blank" class="header-link" rel="noopener noreferrer">
                 Procurando uma API?
             </a>
@@ -22,8 +22,44 @@
 
     </div>
 
-    
+</header>
 
 
-    
-</header>   
+{{!-- the search css is on a different file --}}
+<div class="{{if this.fixedHeader "search-mini" "search"}}">
+    <h1 class="{{if this.fixedHeader "search-text-mini" "search-text"}}">Consultar dados de CNPJ grátis online</h1>
+
+        {{#if @cnpjIsValid}}
+             <div class="input-wrapper-false">
+                <AlertIcon />
+                <Input
+                class='search-input-false'
+                @type="text"
+                @value={{@cnpj}}
+                placeholder='Digite o número do CNPJ'
+                id='cnpj-search'
+                {{on 'input' @handleCnpj}}
+                @enter={{@handleQuerry}}
+                 />
+                <button class="header-input-search" type="button">
+                        <Search-icon />
+                </button>
+            </div>
+        {{else}}
+            <div class="input-wrapper">
+                <Input
+                class='search-input'
+                @type="text"
+                @value={{@cnpj}}
+                placeholder='Digite o número do CNPJ'
+                id='cnpj-search'
+                {{on 'input' @handleCnpj}}
+                @enter={{@handleQuerry}}
+                 />
+                <button class="header-input-search" type="button">
+                    <Search-icon />
+                </button>
+            </div>
+        {{/if}}
+
+</div>
