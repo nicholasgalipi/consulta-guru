@@ -3,11 +3,13 @@
 .search{
     background: #009688;
     height: 5em;
-    z-index: 1000;
+    z-index: 1;
     width: 100%;
     border: red;
     border-radius: 20;
-    position: relative;
+    position: fixed;
+    top: 4.5em;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 30%);
 }
 
 .search-text{
