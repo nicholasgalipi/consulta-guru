@@ -12,9 +12,9 @@ export default class ConsultaCnpjController extends Controller {
   @tracked
   cnpjIsValid = false;
 
-  handleQuerry = (cnpj) => {
-    if (this.validateCnpj(removeNonNumbers(cnpj))) {
-      this.router.transitionTo('cnpj', removeNonNumbers(cnpj));
+  handleQuerry = () => {
+    if (this.validateCnpj(removeNonNumbers(this.cnpj))) {
+      this.router.transitionTo('cnpj', removeNonNumbers(this.cnpj));
     } else {
       this.cnpjIsValid = true;
     }
@@ -25,7 +25,7 @@ export default class ConsultaCnpjController extends Controller {
   }
 
   validateCnpj = (cnpj) => {
-    console.log(cnpj);
+  
     if (!cnpj) return false;
 
     cnpj = cnpj.replace(/[^\d]+/g, '');

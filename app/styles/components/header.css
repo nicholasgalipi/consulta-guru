@@ -24,22 +24,21 @@
     flex-direction: row;
     justify-content: space-between;
     /* align-items: baseline; */
-    margin: 0 21%;  
+    margin: 0 21.5%;  
   }
   
 .menu-and-logo{
   display: flex;
   flex-direction: row;
   padding-top: 20px;
-  gap: 10px;
 }
 
 .menu-and-logo-mini{
   display: flex;
   flex-direction: row;
+  padding-top: 12px;
   height: 25px;
-  padding-top: 14px;
-  
+ 
 }
 
 .logo{
@@ -48,6 +47,8 @@
 
 .logo.mini{
   width: 84px;
+  margin-left: 6px;
+  margin-top: 3px;
 }
 
 .cls-1-menu {
@@ -66,6 +67,7 @@
     height: 30px;
     transform: scale(.8);
     fill: rgba(255,255,255,.8);
+    padding-right: 8px;
 
 }
 
@@ -73,7 +75,7 @@
   display: flex;
   font-size: .9em;
   padding-top: 28px;
-
+  padding-right: 10px;
 }
 
 .links-mini{
@@ -81,14 +83,15 @@
   justify-content: flex-end;
   font-size: .9em;
   padding-top: 9px;
-
+  letter-spacing: .5px;
 }
 
 .header-link{
     font-family: 'Roboto', sans-serif;
     color: white;
     font-weight: 500;
-    margin-left: 2em;
+    margin-left: 20px;
     text-decoration: none;
+    letter-spacing: .5px;
 }
 
