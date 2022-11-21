@@ -6,7 +6,9 @@
             <svg viewBox="0 0 24 24" class="menu-icon">
 	            <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
             </svg>
-            <Logo class="{{if this.fixedHeader "logo-mini" "logo"}}"/>
+            <LinkTo @route="index">
+                <Logo class="{{if this.fixedHeader "logo-mini" "logo"}}"/>
+            </LinkTo>
             
         </div>
 
@@ -41,7 +43,7 @@
                 {{on 'input' @handleCnpj}}
                 @enter={{@handleQuerry}}
                  />
-                <button class="header-input-search" type="button">
+                <button class="header-input-search" type="button" {{on 'click' @handleQuerry}}>
                         <Search-icon />
                 </button>
             </div>
@@ -56,7 +58,7 @@
                 {{on 'input' @handleCnpj}}
                 @enter={{@handleQuerry}}
                  />
-                <button class="header-input-search" type="button">
+                <button class="header-input-search" type="button" {{on 'click' @handleQuerry}}>
                     <Search-icon />
                 </button>
             </div>
