@@ -3,11 +3,12 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { service } from '@ember/service';
 
+
 export default class CnpjController extends Controller {
   @service router;
 
   @tracked
-  cnpj = null;
+  cnpj = stringifyCpnj(this.router.currentRoute.params.cnpj) || null;
 
   @tracked
   cnpjIsValid = false;
@@ -26,7 +27,7 @@ export default class CnpjController extends Controller {
   }
 
   validateCnpj = (cnpj) => {
-    console.log(cnpj);
+    //console.log(this.router.currentRoute.params.cnpj + "tesetes");
     if (!cnpj) return false;
 
     cnpj = cnpj.replace(/[^\d]+/g, '');
