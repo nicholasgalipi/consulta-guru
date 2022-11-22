@@ -145,8 +145,32 @@
                     <p class="share"> {{@shareCapital}}</p>
                 </div>
 
-                <div class="response-item">
+                <div class="response-item response-item-col">
                     <h2>Sócios ou Administradores</h2>
+
+                    <ul>
+                        <li>
+                            <h3>Sócio-Administrtador</h3>
+                                    {{#if @mainActivity}}
+                                            {{#each @legalEntity.partners as |partner|}}
+                                                <p>{{partner.qualification.code}} - {{partner.name}} - {{partner.qualification.description}}</p>
+                                            {{/each}}
+
+                                    {{else}}
+
+                                        <p>
+                                            Não informado.
+                                        </p>
+
+                                    {{/if}}
+
+                        </li>
+
+                    </ul>
+
+
+
+
                 </div>
                 
 
