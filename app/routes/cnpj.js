@@ -34,8 +34,11 @@ export default class CnpjRoute extends Route {
       currency: 'BRL',
     });
 
+    let cnpjFromURL = legalEntity.federalTaxNumber;
+
     return {
       cnpj,
+      cnpjFromURL,
       legalEntity,
       mainActivity,
       secondaryActivity,

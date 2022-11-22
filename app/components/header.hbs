@@ -37,7 +37,7 @@
                 <Input
                 class='search-input-false'
                 @type="text"
-                @value={{@cnpj}}
+                @value={{@cnpjFromURL}}
                 placeholder='Digite o número do CNPJ'
                 id='cnpj-search'
                 {{on 'input' @handleCnpj}}
@@ -52,7 +52,7 @@
                 <Input
                 class='search-input'
                 @type="text"
-                @value={{@cnpj}}
+                @value={{@cnpjFromURL}}
                 placeholder='Digite o número do CNPJ'
                 id='cnpj-search'
                 {{on 'input' @handleCnpj}}
