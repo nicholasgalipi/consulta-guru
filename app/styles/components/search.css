@@ -30,6 +30,7 @@
     font-size: 2em;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
+
 }
 
 .search-text-mini{
@@ -39,12 +40,14 @@
     font-size: 1.1em;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+
 }
 
 
 
 .input-wrapper{
-    --height: 43px;
+    --height: 45px;
     width: 530px;
     position: absolute;
     left: 50%;
@@ -59,7 +62,7 @@
 }
 
 .input-wrapper-false{
-    --height: 43px;
+    --height: 45px;
     width: 530px;
     position: absolute;
     left: 50%;
@@ -74,9 +77,11 @@
 }
 .input-wrapper.mini-wrapper{
     bottom: -32px;
+    --height: 40px;
 }
 .input-wrapper-false.mini-wrapper{
     bottom: -32px;
+    --height: 40px;
 }
 
 .search-input{
